@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>complements</title>
+
+		<style>
+		p {
+			color: blue;
+			font-family: Futura;
+			font-size: 21px;
+		}
+
+		button {
+			background-color: orange;
+			color: white;
+		}
+		</style>
+	</head>
+
+	<body>
+		<p>what is my complement?</p>
+		<input id='submit'/>
+		<button onclick='clicked()'>submit</button>
+		<p id='result'></p>
+
+		<script>
+		var answer = 'orange';
+
+		function clicked () {
+			var submit = document.getElementById( 'submit' );
+
+			if ( submit.value == answer ) {
+				result.innerHTML = 'that\'s right!';
+			}
+			else {
+				result.innerHTML = 'nope, guess again.';
+			}
+			result.style.color = submit.value;
+		}
+		</script>
+	</body>
+</html>
